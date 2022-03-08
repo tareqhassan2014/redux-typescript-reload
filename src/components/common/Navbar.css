@@ -1,0 +1,71 @@
+.navbarMenu {
+    width: 100%;
+    align-items: center;
+}
+.navbarDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header {
+    background: rgba(64, 109, 117, 0.938);
+}
+
+/* navbarMenu */
+.navMenu {
+    background-color: rgb(26, 38, 48);
+    justify-content: center;
+}
+.menuLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    border-left: 0.5px solid rgb(163, 163, 163);
+    text-decoration: none !important;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+}
+.menuLink:hover {
+    background-color: rgba(64, 109, 117, 0.938);
+}
+.menuLinkLast {
+    border-right: 0.5px solid rgb(163, 163, 163);
+}
+.white100 {
+    width: 100% !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+/* Hover menu */
+.hoverMenu {
+    margin-left: 130px;
+    width: 15%;
+    border: 1px solid rgb(61, 61, 61);
+    height: 200px;
+    justify-items: normal;
+    background-color: rgb(26, 38, 48);
+    position: absolute;
+    z-index: 200;
+}
+.hoverMenuLink {
+    justify-content: center;
+    display: flex;
+    text-decoration: none !important;
+    cursor: pointer;
+    margin-top: 10px !important;
+    color: white !important;
+}
+.hoverMenuLink:hover {
+    background: rgba(64, 109, 117, 0.938);
+    color: white !important;
+}
+@media only screen and (max-width: 600px) {
+    .MenuIcon {
+        display: none !important;
+    }
+    .logo {
+        width: 40% !important;
+    }
+}

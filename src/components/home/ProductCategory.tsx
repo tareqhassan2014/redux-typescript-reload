@@ -2,15 +2,14 @@ import { Grid, Typography } from '@mui/material';
 import { useCallback } from 'react';
 import useAsync from '../../hooks/useAsync';
 import ProductService from '../../services/ProductService';
-import ProductCart from './ProductCart';
+import ProductCart from '../common/ProductCart';
 
-const ProductCategory = ({
-    title,
-    query,
-}: {
+interface IProps {
     title: string;
     query: string;
-}) => {
+}
+
+const ProductCategory = ({ title, query }: IProps) => {
     const getProduct = useCallback(() => {
         return ProductService.getFilteredProduct(query);
     }, [query]);
@@ -19,7 +18,6 @@ const ProductCategory = ({
 
     return (
         <>
-            {' '}
             <Typography variant="h2" sx={{ my: 5 }} color="primary">
                 {title}
             </Typography>
@@ -32,7 +30,7 @@ const ProductCategory = ({
             >
                 {data &&
                     data.map((product) => (
-                        <Grid item xs={12} sm={6} md={3} key={product._id}>
+                        <Grid item xs={12} sm={6} md={4} key={product._id}>
                             <ProductCart product={product} />
                         </Grid>
                     ))}

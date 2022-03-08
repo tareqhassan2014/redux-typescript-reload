@@ -66,7 +66,10 @@ const ResponsiveAppBar = () => {
                         component="div"
                         sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
                     >
-                        LOGO
+                        <img
+                            src="https://i.ibb.co/tK1KcRb/shopping-Cart.png"
+                            alt="shopping-Cart"
+                        />
                     </Typography>
 
                     <Box

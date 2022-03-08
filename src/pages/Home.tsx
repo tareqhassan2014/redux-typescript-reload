@@ -4,11 +4,11 @@ import ProductCategory from '../components/home/ProductCategory';
 
 const Home = () => {
     const Laptop =
-        '?category=laptop&sort=-price&page=1&limit=8&fields=category,name,star,img,price';
+        '?category=laptop&sort=-price&page=1&limit=6&fields=category,name,star,img,price';
     const Android =
-        '?category=android&sort=-price&page=1&limit=8&fields=category,name,star,img,price';
+        '?category=android&sort=-price&page=1&limit=6&fields=category,name,star,img,price';
     const Camera =
-        '?category=camera&sort=-price&page=1&limit=8&fields=category,name,star,img,price';
+        '?category=camera&sort=-price&page=1&limit=6&fields=category,name,star,img,price';
     return (
         <Container>
             <ProductCategory title="Laptop" query={Laptop} />
