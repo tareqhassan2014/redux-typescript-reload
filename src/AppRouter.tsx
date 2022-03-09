@@ -17,6 +17,7 @@ const AppRouter = () => {
             <Suspense fallback={<h1> Loading.....</h1>}>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/home" element={<Home />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/login" element={<LogIn />} />
                     <Route path="/signup" element={<SignUp />} />

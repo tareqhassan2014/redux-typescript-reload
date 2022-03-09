@@ -1,9 +1,11 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton, Link, Typography } from '@mui/material';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function NavMenu() {
     const [dropDown, setDropDown] = useState(false);
+    let navigate = useNavigate();
     return (
         <div className="white100">
             <div className="navMenu row d-flex white100">
@@ -37,6 +39,7 @@ function NavMenu() {
                             gutterBottom
                             component="div"
                             style={{ color: 'white' }}
+                            onClick={() => navigate('/home')}
                         >
                             HOME
                         </Typography>
@@ -47,6 +50,7 @@ function NavMenu() {
                             gutterBottom
                             component="div"
                             style={{ color: 'white' }}
+                            onClick={() => navigate('/home')}
                         >
                             SHOP
                         </Typography>
@@ -67,6 +71,7 @@ function NavMenu() {
                             gutterBottom
                             component="div"
                             style={{ color: 'white' }}
+                            onClick={() => navigate('/contact')}
                         >
                             CONTACT
                         </Typography>
@@ -86,6 +91,7 @@ function NavMenu() {
                             gutterBottom
                             component="div"
                             style={{ color: 'white' }}
+                            onClick={() => navigate('/home')}
                         >
                             HOME
                         </Typography>
@@ -95,6 +101,7 @@ function NavMenu() {
                             variant="subtitle2"
                             gutterBottom
                             component="div"
+                            onClick={() => navigate('/home')}
                         >
                             SHOP
                         </Typography>
@@ -113,6 +120,7 @@ function NavMenu() {
                             variant="subtitle2"
                             gutterBottom
                             component="div"
+                            onClick={() => navigate('/contact')}
                         >
                             CONTACT
                         </Typography>
