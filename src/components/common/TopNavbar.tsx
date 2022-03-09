@@ -14,6 +14,7 @@ import { alpha, styled } from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
 import * as React from 'react';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { AppState } from '../../redux/store';
 import './Navbar';
 
@@ -58,6 +59,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function TopNavbar() {
+    let navigate = useNavigate();
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
         React.useState<null | HTMLElement>(null);
@@ -135,6 +137,7 @@ export default function TopNavbar() {
                     size="large"
                     aria-label="show 17 new notifications"
                     color="inherit"
+                    onClick={() => cart.length && navigate('/checkout')}
                 >
                     <Badge badgeContent={cart.length} color="error">
                         <NotificationsIcon />
@@ -188,8 +191,11 @@ export default function TopNavbar() {
                                 size="large"
                                 aria-label="show 17 new notifications"
                                 color="inherit"
+                                onClick={() =>
+                                    cart.length && navigate('/checkout')
+                                }
                             >
-                                <Badge badgeContent={17} color="error">
+                                <Badge badgeContent={cart.length} color="error">
                                     <ShoppingCartIcon />
                                 </Badge>
                             </IconButton>
